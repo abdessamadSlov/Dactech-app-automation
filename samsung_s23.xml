@@ -1,0 +1,8 @@
+<suite name="Samsung_S23">
+    <test name="TechniciensDApp_S23">
+        <parameter name="device" value="s23"/>
+        <classes>
+            <class name="runners.TestRunner"/>
+        </classes>
+    </test>
+</suite>
