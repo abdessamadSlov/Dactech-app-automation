@@ -4,7 +4,12 @@ stages:
 test_mobile:
   stage: test
   image: maven:3.9.3-openjdk-17
-  script:
+  script:  
+    - ./BrowserStackLocal --key $BROWSERSTACK_KEY &
     - mvn clean test -DsuiteXmlFile=testng.xml
   tags:
     - docker
+artifacts:
+    when: always
+    paths:
+      - [cite_start]target/surefire-reports/
