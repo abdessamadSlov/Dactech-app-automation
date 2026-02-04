@@ -13,11 +13,11 @@ L'application permet de :
 - Capture photo et audio si nécessaire
 - Signature du client
 - Envoi des OT au manager
-L'application est uniquement disponible sur **Android** pour les techniciens.
+L'application est disponible  sur **Android** et **Iphone** pour les techniciens.
 
 ## 🛠️ Stack technique
 - **Langage :** Java 11
-- **Automatisation Mobile :** Appium (UiAutomator2)
+- **Automatisation Mobile :** Appium (UiAutomator2 & XCUITest)
 - **BDD / Scénarios Métier :** Cucumber
 - **Gestion des tests :** TestNG 
 - **Multi-device / Cloud :** BrowserStack (d'abord emulators + real devices..)
