@@ -5,6 +5,6 @@ test_mobile:
   stage: test
   image: maven:3.9.3-openjdk-17
   script:
-    - mvn clean install -DsuiteXmlFile=src/test/resources/testng/samsung_s22.xml
+    - mvn clean test -DsuiteXmlFile=testng.xml
   tags:
     - docker
