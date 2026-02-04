@@ -1,0 +1,57 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="MobileTestSuite" verbose="1" parallel="tests" thread-count="6">
+
+    <!-- ===== Android Devices ===== -->
+
+    <test name="Android_Samsung_S22">
+        <parameter name="deviceKey" value="s22"/>
+        <classes>
+            <class name="runners.TestRunner"/>
+        </classes>
+    </test>
+
+    <test name="Android_Google_Pixel7">
+        <parameter name="deviceKey" value="pixel7"/>
+        <classes>
+            <class name="runners.TestRunner"/>
+        </classes>
+    </test>
+
+    <test name="Android_OnePlus9">
+        <parameter name="deviceKey" value="oneplus9"/>
+        <classes>
+            <class name="runners.TestRunner"/>
+        </classes>
+    </test>
+
+    <!-- ===== iOS Devices ===== -->
+
+    <test name="iOS_iPhone14">
+        <parameter name="deviceKey" value="iphone14"/>
+        <classes>
+            <class name="runners.TestRunner"/>
+        </classes>
+    </test>
+
+    <test name="iOS_iPhone13">
+        <parameter name="deviceKey" value="iphone13"/>
+        <classes>
+            <class name="runners.TestRunner"/>
+        </classes>
+    </test>
+
+    <test name="iOS_iPadPro129">
+        <parameter name="deviceKey" value="ipadPro129"/>
+        <classes>
+            <class name="runners.TestRunner"/>
+        </classes>
+    </test>
+
+    <test name="iOS_iPhoneSE">
+        <parameter name="deviceKey" value="iphoneSE"/>
+        <classes>
+            <class name="runners.TestRunner"/>
+        </classes>
+    </test>
+
+</suite>
