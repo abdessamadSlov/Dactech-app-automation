@@ -1,0 +1,16 @@
+variables:
+  BROWSERSTACK_USER: $BS_USER
+  BROWSERSTACK_KEY: $BS_KEY
+
+test_mobile:
+  [cite_start]image: my-appium-docker-image:latest 
+  stage: test
+  script:
+    # tunnel
+    - ./BrowserStackLocal --key $BROWSERSTACK_KEY & 
+    # Exécution 
+    - mvn test -DsuiteXmlFile=testng/samsung_s22.xml 
+  artifacts:
+    when: always
+    paths:
+      - [cite_start]target/surefire-reports/ #reporting
