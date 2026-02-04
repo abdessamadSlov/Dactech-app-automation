@@ -1,6 +1,6 @@
 <suite name="Samsung_S22">
     <test name="TechniciensDApp_S22">
-        <parameter name="device" value="s22"/>
+        <parameter name="deviceKey" value="s22"/>
         <classes>
             <class name="runners.TestRunner"/>
         </classes>
