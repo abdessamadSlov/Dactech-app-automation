@@ -1,0 +1,11 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite_iPhone14">
+
+    <test name="TechniciensDApp_iPhone14">
+        <parameter name="deviceKey" value="iphone14"/>
+        <classes>
+            <class name="runners.TestRunner"/>
+        </classes>
+    </test>
+
+</suite>
