@@ -3,7 +3,7 @@ Projet d'automatisation Appium
 
 # TechniciensDApp – Mobile Automation Framework
 
-## 📱 **TechniciensDApp** est une application Android utilisée par les techniciens terrain pour gérer les ordres de travail (OT) quotidiens.  
+## 📱 **TechniciensDApp** est une application Android/Ios utilisée par les techniciens terrain pour gérer les ordres de travail (OT) quotidiens.  
 
 L'application permet de :
 - Authentification du technicien
