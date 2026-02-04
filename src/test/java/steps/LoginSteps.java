@@ -10,7 +10,7 @@ public class LoginSteps {
     private LoginPage loginPage = new LoginPage();
 
     @Given("le technicien est authentifié")
-    public void le_technicien_est_authentifié() {
+    public void le_technicien_est_authentifie() {
         // Ici on peut mettre des identifiants fictifs pour demo
         loginPage.authenticate("technicien1", "Password123");
     }
