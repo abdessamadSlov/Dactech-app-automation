@@ -1,18 +1,23 @@
 package utils;
 
-import config.DriverFactory;
-import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import pages.BasePage;
 
 public class MediaUtils {
 
+    private static BasePage basePage = new BasePage();
+
     public static void takePhoto() {
-        DriverFactory.getDriver().findElement(By.id("btn_photo")).click();
-        DriverFactory.getDriver().findElement(By.id("camera_capture")).click();
+        WebElement btnPhoto = basePage.find("media.btn_photo");
+        WebElement capture  = basePage.find("media.camera_capture");
+
+        btnPhoto.click();
+        capture.click();
     }
 
     public static void recordAudio() {
-        DriverFactory.getDriver().findElement(By.id("btn_audio")).click();
-        try { Thread.sleep(3000); } catch(Exception e){}
-        DriverFactory.getDriver().findElement(By.id("btn_stop_audio")).click();
+        basePage.find("media.btn_audio").click();
+        try { Thread.sleep(3000); } catch (InterruptedException ignored) {}
+        basePage.find("media.btn_stop_audio").click();
     }
 }
