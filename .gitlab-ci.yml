@@ -5,8 +5,9 @@ test_mobile:
   stage: test
   image: maven:3.9.3-openjdk-17
   script:  
-    - ./BrowserStackLocal --key $BROWSERSTACK_KEY &
+    - ./browserstack-local --key $BROWSERSTACK_KEY --daemon start
     - mvn clean test -DsuiteXmlFile=testng.xml
+    - ./browserstack-local --key $BROWSERSTACK_KEY --daemon stop
   tags:
     - docker
 artifacts:
