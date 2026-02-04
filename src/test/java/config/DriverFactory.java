@@ -21,15 +21,13 @@ public class DriverFactory {
         caps.setCapability("appPackage", ConfigReader.get("appPackage"));
         caps.setCapability("appActivity", ConfigReader.get("appActivity"));
 
-        try {
-            driver.set(new AndroidDriver<>(
-                new URL("https://" +
-                    ConfigReader.get("browserstack.user") + ":" +
-                    ConfigReader.get("browserstack.key") +
-                    "@hub.browserstack.com/wd/hub"),
-                caps));
-        } catch (Exception e) {
-            throw new RuntimeException("Driver init failed", e);
+        //  boucle de capabilities
+        String platform = ConfigReader.get(deviceKey + ".platformName");
+        
+        if (platform.equalsIgnoreCase("android")) {
+            driver.set(new AndroidDriver<>(new URL(bsUrl), caps));
+        } else {
+            driver.set(new IOSDriver<>(new URL(bsUrl), caps));
         }
     }
 
