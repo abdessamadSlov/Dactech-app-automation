@@ -21,7 +21,7 @@ public class WorkOrderSteps {
     }
 
     @Then("l'ordre de travail est envoyé au manager")
-    public void ot_envoyé_au_manager() {
+    public void ot_envoye_au_manager() {
         System.out.println("OT envoyé (simulation)");
         // Ici tu pourrais ajouter vérif via notificationPage ou API si nécessaire
     }
