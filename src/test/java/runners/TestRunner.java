@@ -21,6 +21,7 @@ public class TestRunner extends AbstractTestNGCucumberTests {
         config.DriverFactory.initDriver(deviceKey);
     }
 
+    //classe héritée, via testNG lance features<->test.step
     @Override
     @DataProvider(parallel = true)
     public Object[][] scenarios() {
