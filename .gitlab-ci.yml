@@ -11,6 +11,7 @@ test_mobile:
   tags:
     - docker
 artifacts:
+// meme si a échoue
     when: always
     paths:
       - [cite_start]target/surefire-reports/
