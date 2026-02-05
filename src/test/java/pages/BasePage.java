@@ -12,10 +12,15 @@ public abstract class BasePage {
         this.driver = driver;
     }
 
-    //  clé --> locator
-    // "login.username" → By.id("com.app:id/username")
+   
     protected MobileElement find(String key) {
         return driver.findElement(getLocator(key));
+    }
+
+     //  clé --> locator
+    // "login.username" → By.id("com.app:id/username")
+     protected By getLocator(String key) {
+        return By.id(key);
     }
 
 }
