@@ -16,8 +16,8 @@ public class MediaUtils {
     }
 
     public static void recordAudio() {
-        basePage.find("media.btn_audio").click();
-        try { Thread.sleep(3000); } catch (InterruptedException ignored) {}
-        basePage.find("media.btn_stop_audio").click();
+       basePage.find("media.btn_audio").click();
+    basePage.waitForVisible("media.btn_stop_audio", 10);
+    basePage.find("media.btn_stop_audio").click();
     }
 }
