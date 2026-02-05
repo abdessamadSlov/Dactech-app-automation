@@ -22,5 +22,6 @@ public abstract class BasePage {
      protected By getLocator(String key) {
         return By.id(key);
     }
+    
 
 }
