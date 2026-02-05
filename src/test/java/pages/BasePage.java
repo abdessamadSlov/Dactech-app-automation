@@ -20,7 +20,8 @@ public abstract class BasePage {
      //  clé --> locator
     // "login.username" → By.id("com.app:id/username")
      protected By getLocator(String key) {
-        return By.id(key);
+        String locator = LocatorReader.get(key);
+        return By.id(locator);
     }
     
 
